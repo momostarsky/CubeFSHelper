@@ -2,13 +2,9 @@
 ```
 lsb_release -a
 ```
-```
-o LSB modules are available.
-Distributor ID: Ubuntu
-Description:    Ubuntu 20.04.6 LTS
-Release:        20.04
-Codename:       focal
-```
+ 
+Ubuntu 20.04 和 18.04 均可
+ 
 ### 安装依赖项
 ```
 apt install  gcc g++    make cmake maven
@@ -41,13 +37,15 @@ cd cubefs
 git checkout  v3.3.2
 make build
 ```
-### 如果编译失败 ，修复错误
+### 如果编译失败 ，修复错误后可以从头编译。
+或是仅仅执行 go mod tidy 命令后重新执行  make build 即可
+
 ```
 cd  build
 rm  include/ lib/ out/ bin -rf
 cd  ..
 go mod tidy
-make build 
 ```
+ 
 
 
