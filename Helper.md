@@ -11,7 +11,7 @@ Codename:       focal
 ```
 ### 安装依赖项
 ```
-apt install  gcc g++   zlib-dev bzip2-dev  make cmake maven
+apt install  gcc g++    make cmake maven
 ```
 ### 安装GO
 ```
