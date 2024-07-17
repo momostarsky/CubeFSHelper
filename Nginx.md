@@ -12,6 +12,7 @@ http {
     add_header Cross-Origin-Opener-Policy   "same-origin"  always;
     server {
         listen       8080 ssl;
+        http2 on;
         server_name  www.monostarsky.com;
         ##
         ##  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /path/to/monostarsky.key -out /path/to/monostarsky.crt
@@ -38,3 +39,7 @@ http {
 
 ```shell
 nginx -c /path/to/private-nginx.conf
+
+```shell
+sudo lsof -i :8080 | awk 'NR  >1 { print $2}'  | xargs sudo kill -9
+```
