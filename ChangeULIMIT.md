@@ -1,6 +1,8 @@
 ### 修改 ulimit 1024 的限制
 
-ubuntu 20.04 验证过的。   作者： https://blog.csdn.net/yjkhtddx/article/details/109166147
+ubuntu 20.04 验证过的。  
+作者： https://blog.csdn.net/yjkhtddx/article/details/109166147
+作者： https://www.cnblogs.com/zhanchenjin/p/18109456
 
 ```shell
 #!/bin/bash
@@ -28,6 +30,13 @@ EOF
 # Systemd  
 # cd /etc/systemd/
 # grep -rn -F "DefaultLimitNOFILE"
-sudo sed -i '/DefaultLimitNOFILE/c DefaultLimitNOFILE=65535' /etc/systemd/*.conf
+
+#然后，在下面的两文件中加入：DefaultLimitNOFILE=204800
+#sudo vim /etc/systemd/user.conf 
+#sudo vim /etc/systemd/system.conf
+
+
+sudo sed -i '/DefaultLimitNOFILE/c DefaultLimitNOFILE=65535' /etc/systemd/user.conf
+sudo sed -i '/DefaultLimitNOFILE/c DefaultLimitNOFILE=65535' /etc/systemd/system.conf
 sudo systemctl daemon-reexec
 ```
