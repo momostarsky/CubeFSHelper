@@ -1,8 +1,9 @@
 ### 修改 ulimit 1024 的限制
 
-ubuntu 20.04 验证过的。  
-作者： https://blog.csdn.net/yjkhtddx/article/details/109166147
-作者： https://www.cnblogs.com/zhanchenjin/p/18109456
+ubuntu 20.04 验证过的。  参考以下：
+- 作者： https://blog.csdn.net/yjkhtddx/article/details/109166147
+- 作者： https://www.cnblogs.com/zhanchenjin/p/18109456
+- 作者： https://www.cnblogs.com/zhanchenjin/p/18109456
 
 ```shell
 #!/bin/bash
