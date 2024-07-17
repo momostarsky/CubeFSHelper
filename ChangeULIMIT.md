@@ -3,7 +3,7 @@
 ubuntu 20.04 验证过的。  参考以下：
 - 作者： https://blog.csdn.net/yjkhtddx/article/details/109166147
 - 作者： https://www.cnblogs.com/zhanchenjin/p/18109456
-- 作者： https://www.cnblogs.com/zhanchenjin/p/18109456
+- 作者： https://www.daxuxu.info/blog/post/ubuntu20-04diao-zheng-ulimitbu-sheng-xiao-wen-ti/
 
 ```shell
 #!/bin/bash
