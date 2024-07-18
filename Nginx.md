@@ -42,4 +42,8 @@ nginx -c /path/to/private-nginx.conf
 
 ```shell
 sudo lsof -i :8080 | awk 'NR  >1 { print $2}'  | xargs sudo kill -9
+
+sudo  lsof -i :8080 | awk 'BEGIN {FS=" "} {if (NR>1) print $2}'
+
+
 ```
