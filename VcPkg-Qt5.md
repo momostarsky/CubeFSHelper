@@ -8,4 +8,9 @@
 find_package(VTK REQUIRED)
 
 target_link_libraries(main PRIVATE ${VTK_LIBRARIES})
+
+
+find_package(VTKm CONFIG REQUIRED)
+
+target_link_libraries(main PRIVATE vtkm::io vtkm::diy vtkm::lcl vtkm::cont)
 ```
